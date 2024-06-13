@@ -1,0 +1,33 @@
+.place {
+  width: 1440px;
+  display: grid;
+  grid-template-areas: 'a a ' 'b c ';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  gap: 10px;
+
+  margin: 140px auto 0 auto;
+}
+
+.place__title {
+  color: #333232;
+  grid-area: a;
+  margin: 0 auto 30px 0;
+}
+
+.place__description {
+  border-radius: 28px;
+  width: 590px;
+  height: 197px;
+  background-color: #c5b6f1;
+  padding: 40px 48px 0 48px;
+  color: #333232;
+  grid-area: b;
+}
+
+.place__description_yellow {
+  background-color: #f5f07a;
+  color: #333232;
+  grid-area: c;
+}
