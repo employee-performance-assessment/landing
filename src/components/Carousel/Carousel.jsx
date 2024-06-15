@@ -9,19 +9,15 @@ const Carousel = () => {
 
   useEffect(() => {
     const carousel = document.querySelector('.carousel__gallery');
-    carousel.addEventListener('scroll', handleScroll, true);
+    carousel.addEventListener('wheel', handleScroll, { passive: false });
     carousel.addEventListener('click', handleScroll);
     // Помечаем картинки для удобства разработки
     listItemsRef.current.forEach((item, index) => {
       item.style.position = 'relative';
-      item.insertAdjacentHTML(
-        'beforeend',
-        `<span style="position:absolute;left:0;top:0">${index + 1}</span>`
-      );
     });
-    // return () => {
-    //   carousel.removeEventListener('scroll', handleScroll);
-    // };
+    return () => {
+      carousel.removeEventListener('wheel', handleScroll);
+    };
   }, []);
 
   const handlePrevClick = () => {
@@ -47,7 +43,11 @@ const Carousel = () => {
 
   const handleScroll = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    if ((e.deltaY || e.detail || e.wheelDelta) > 0) {
+      handlePrevClick();
+    } else {
+      handleNextClick();
+    }
   };
 
   return (
