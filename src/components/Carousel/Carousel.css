@@ -4,19 +4,20 @@ body {
 
 .carousel {
   position: relative;
-  width: 398px;
+  width: 1440px;
+  margin: 0 auto;
   padding: 10px 40px;
-  border: 1px solid #ccc;
+
   border-radius: 15px;
-  background: #eee;
 }
 
-.carousel img {
+/* .carousel img {
   width: 130px;
   height: 130px;
-  /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
+  делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок
   display: block;
-}
+  ]
+ */
 
 .prev {
   left: 7px;
@@ -27,19 +28,17 @@ body {
 }
 
 .carousel__gallery {
-  width: 390px;
+  width: 1440px;
   overflow: hidden;
 }
 
 .carousel__gallery ul {
-  height: 130px;
+  height: 385pxpx;
   width: 9999px;
   margin: 0;
   padding: 0;
   list-style: none;
   transition: margin-left 250ms;
-  /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
-  /* http://davidwalsh.name/remove-whitespace-inline-block */
   font-size: 0;
 }
 
@@ -49,4 +48,10 @@ body {
 
 .carousel__item {
   position: relative;
+}
+
+.carousel__image {
+  width: 335px;
+  height: 385px;
+  display: block;
 }

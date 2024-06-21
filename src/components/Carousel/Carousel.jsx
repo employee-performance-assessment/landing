@@ -67,7 +67,7 @@ const Carousel = () => {
             'https://ru.js.cx/carousel/10.png',
           ].map((src, index) => (
             <li key={index} ref={(el) => (listItemsRef.current[index] = el)}>
-              <img src={src} alt={`hbf ${index + 1}`} />
+              <img src={src} alt={`hbf ${index + 1}`} className='carousel__image' />
             </li>
           ))}
         </ul>
