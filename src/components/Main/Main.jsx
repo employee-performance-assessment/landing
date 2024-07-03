@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Main.css';
 import team from '../../images/team.svg';
 import img1 from '../../images/img1.png';
@@ -8,6 +9,9 @@ import img5 from '../../images/img5.png';
 import img6 from '../../images/img6.png';
 import img7 from '../../images/img7.png';
 import Carousel from '../Carousel/Carousel';
+import Card from '../Card/Card';
+import githubIco from '../../images/ico-github.png';
+import mailIco from '../../images/ico-mail.png';
 const Main = () => {
   return (
     <main className="main">
@@ -138,7 +142,53 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <Carousel />
+      <div className="carousel-component">
+        <h2 className="carousel__title">Над продуктом работали</h2>
+        <Carousel />
+      </div>
+      <div className="questions">
+        <h2 className="questions__title">Часто задаваемые вопросы</h2>
+        <div className="questions__cards">
+          <div className="questions__column">
+            <Card
+              question="Как измеряется эффективность сотрудника?"
+              answer="Эффективность задач измеряется по накопленным баллам за выполненные задачи в личном кабинете сотрудника или по мнениям коллег через кросс-опросы."
+            />
+            <Card
+              question="В чём разница между ролью администратора и сотрудника?"
+              answer="Администратор ставит задачи, оценивает баллы, создаёт проекты, видит всю аналитику и инициирует опросы."
+            />
+            <Card
+              question="Кто может видеть результаты эффективности команды?"
+              answer="Только администратор в разделе «Аналитика» может посмотреть успеваемость выполнения всей команды и индивидуально по каждому сотруднику. Также можно посмотреть по всей команде."
+            />
+          </div>
+          <div className="questions__column">
+            <Card
+              question="Кто оценивает баллы за задачу?"
+              answer="Баллы за задачу оценивает администратор."
+            />
+            <Card
+              question="Можно ли создавать свои уникальные опросы?"
+              answer="Да, вы можете создавать свои уникальные опросы в личном кабинете администратора."
+            />
+            <Card question="" answer="" />
+          </div>
+        </div>
+      </div>
+      <div className="contacts">
+        <h2 className="contacts__title">Контакты</h2>
+        <div className="contacts__container">
+          <div className="contacts__card">
+            <img src={githubIco} className="contacts__img" />
+            <p className="contacts__contact">Наше сообщество</p>
+          </div>
+          <div className="contacts__card">
+            <img src={mailIco} className="contacts__img" />
+            <p className="contacts__contact">Наша почта</p>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

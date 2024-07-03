@@ -1,23 +1,9 @@
-body {
-  padding: 10px;
-}
-
 .carousel {
   position: relative;
   width: 1440px;
   margin: 0 auto;
-  padding: 10px 40px;
-
   border-radius: 15px;
 }
-
-/* .carousel img {
-  width: 130px;
-  height: 130px;
-  делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок
-  display: block;
-  ]
- */
 
 .prev {
   left: 7px;
@@ -33,8 +19,8 @@ body {
 }
 
 .carousel__gallery ul {
-  height: 385pxpx;
-  width: 9999px;
+  height: 385px;
+  width: 19999px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -42,8 +28,9 @@ body {
   font-size: 0;
 }
 
-.carousel__gallery li {
+.carousel__li {
   display: inline-block;
+  margin-right: 20px;
 }
 
 .carousel__item {
