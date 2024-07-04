@@ -179,14 +179,17 @@ const Main = () => {
       <div className="contacts">
         <h2 className="contacts__title">Контакты</h2>
         <div className="contacts__container">
-          <div className="contacts__card">
+          <a
+            href="https://github.com/employee-performance-assessment"
+            className="contacts__card"
+          >
             <img src={githubIco} className="contacts__img" />
             <p className="contacts__contact">Наше сообщество</p>
-          </div>
-          <div className="contacts__card">
+          </a>
+          <button className="contacts__card">
             <img src={mailIco} className="contacts__img" />
             <p className="contacts__contact">Наша почта</p>
-          </div>
+          </button>
         </div>
       </div>
     </main>
