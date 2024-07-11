@@ -7,6 +7,9 @@
   line-height: 48px;
   gap: 10px;
   margin: 140px auto 140px auto;
+  animation: ritgh-move;
+  animation-timeline: view(0% 30%);
+  opacity: 0;
 }
 
 .place__title {
@@ -16,6 +19,17 @@
   font-size: 52px;
   font-weight: 500;
   line-height: 62.93px;
+}
+
+@keyframes ritgh-move {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .place__description {
@@ -50,6 +64,19 @@
   font-weight: 500;
   line-height: 62.93px;
   width: 625px;
+  animation: scale both;
+  animation-timeline: view(70% 10%);
+}
+
+@keyframes ritgh-side {
+  from {
+    opacity: 0;
+    transform: translateX(-400px) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 .you-get__table {
@@ -68,6 +95,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: scale both;
+  animation-timeline: view(70% 10%);
+}
+
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Смещение четырех и пятого элементов на свои места */
@@ -99,6 +139,19 @@
   line-height: 48px;
   gap: 10px;
   margin: 0 auto 140px auto;
+  animation: polemorf both;
+  animation-timeline: view(70% 20%);
+}
+
+@keyframes polemorf {
+  from {
+    background-color: #ffffff;
+    opacity: 0;
+  }
+  to {
+    background-color: #ffffff;
+    opacity: 1;
+  }
 }
 
 .suitable__title {
@@ -157,6 +210,20 @@
 
 .seven-steps__cell:nth-child(odd) {
   margin-top: -150px;
+
+  animation: ritgh-move;
+  animation-timeline: view(90% 0%);
+}
+
+@keyframes ritgh-move {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 .seven-steps__cell:first-child {
@@ -165,6 +232,20 @@
 
 .seven-steps__cell:nth-child(even) {
   margin-top: 300px;
+  right: 20px;
+  animation: left-move;
+  animation-timeline: view(90% 0%);
+}
+
+@keyframes left-move {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 .seven-steps__title-cell {
@@ -249,20 +330,43 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.contacts__card:hover {
+  animation: twitching;
+  animation-duration: 0.5s;
+}
+
+@keyframes twitching {
+  0% {
+    transform: scale(0.95, 1.05);
+  }
+  33% {
+    transform: scale(1.05, 0.95);
+  }
+  66% {
+    transform: scale(0.95, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 .contacts__img {
   width: 60px;
   height: 60px;
   margin: 40px auto 100px 40px;
 }
 
-.contacts__card {
+.contacts__card,
+.contacts__card:active,
+.contacts__card:hover {
   width: 686px;
   min-height: 279px;
   background-color: white;
   border-radius: 28px;
   padding-bottom: 40px;
-  border: 2px solid #c5b6f1;
+  border: 2px solid #000000;
   text-decoration: none;
+  color: #000000;
 }
 
 .contacts__contact {

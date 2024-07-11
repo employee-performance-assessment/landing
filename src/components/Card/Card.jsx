@@ -3,7 +3,6 @@ import './Card.css';
 
 export default function Card({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(question.length);
   const cardContainer = () => {
     return (
       <>

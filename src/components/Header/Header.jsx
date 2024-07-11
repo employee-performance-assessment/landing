@@ -1,22 +1,18 @@
 import './Header.css';
+import Letter from '../Letter/Letter'
 const Header = () => {
+
+
   return (
     <header className="header">
       <h1 className="header__pouring">
-        <p className="header__text">W</p>
-        <p className="header__text">e</p>
-        <p className="header__text">l</p>
-        <p className="header__text">l</p>
-        <p className="header__text">D</p>
-        <p className="header__text">o</p>
-        <p className="header__text">n</p>
-        <p className="header__text">e</p>
+        {'Welldone'.split('').map((item, i) => <Letter letter={item} id={i}/>)}
       </h1>
       <p className="header__description">
         Соберите все данные о ваших сотрудниках в одном месте и постройте
         эффективную команду
       </p>
-      <p className="header__link">Перейти на сайт</p>
+      <a href='#' className="header__link">Перейти на сайт</a>
     </header>
   );
 };

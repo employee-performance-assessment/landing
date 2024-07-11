@@ -61,7 +61,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="suitable">
+      <div className="suitable"> 
         <h2 className="suitable__title">Вы попали в нужное место, если</h2>
         <p className="suitable__description">
           Удалённым командам до 10 человек. IT, маркетингу, агентствам,
@@ -72,6 +72,7 @@ const Main = () => {
           src={team}
           alt="рисунок дружной команды"
         />
+
       </div>
       <div className="seven-steps">
         <h2 className="seven-steps__title">
@@ -137,7 +138,7 @@ const Main = () => {
             </p>
             <img
               src={img7}
-              alt="олучайте полную статистику оценок эффективности по каждому участнику"
+              alt="Получайте полную статистику оценок эффективности по каждому участнику"
             />
           </div>
         </div>
@@ -186,10 +187,13 @@ const Main = () => {
             <img src={githubIco} className="contacts__img" />
             <p className="contacts__contact">Наше сообщество</p>
           </a>
-          <button className="contacts__card">
+          <a
+            href="mailto:example@example.com"
+            className="contacts__card"
+          >
             <img src={mailIco} className="contacts__img" />
             <p className="contacts__contact">Наша почта</p>
-          </button>
+          </a>
         </div>
       </div>
     </main>
